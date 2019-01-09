@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CalendarTheme.CustomizedTheme"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+              xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
+             xmlns:local="clr-namespace:CalendarTheme">
+     <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <syncTheme:LightTheme />
+                <syncfusion:SfCalendarStyles />
+                <ResourceDictionary>
+                    <Color x:Key="SfCalendarInlineBackgroundColor">Green</Color>
+                    <Color x:Key="SfCalendarWeekEndBackgroundColor">Blue</Color>
+                    <Color x:Key="SfCalendarYearViewHeaderTextColor">Blue</Color>
+                    <Color x:Key="SfCalendarYearViewDateTextColor">Green</Color>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <syncfusion:SfCalendar.BindingContext>
+        <local:CalendarViewModel/>
+    </syncfusion:SfCalendar.BindingContext>
+    <syncfusion:SfCalendar x:Name="calendar" ViewMode="MonthView" ShowInlineEvents="true" InlineViewMode="Inline" />
+</ContentPage>
